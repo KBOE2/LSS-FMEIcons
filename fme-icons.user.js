@@ -13,4 +13,4 @@
 // @include      *://www.meldkamerspel.com/
 // ==/UserScript==
 
-$("head").append('<script id="lss_fmeIcons" src="" type="text/javascript"></script>');
+$("head").append('<script id="lss_fmeIcons" src="https://raw.githubusercontent.com/KBOE2/LSS-FMEIcons/master/fme-icons.dev.js" type="text/javascript"></script>');
