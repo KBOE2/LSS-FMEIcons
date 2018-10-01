@@ -32,8 +32,8 @@
 
     let missionMarkerAddOrig = missionMarkerAdd;
 
-    missionMarkerAdd = function() {
-        missionMarkerAddOrig();
+    missionMarkerAdd = function(e) {
+        missionMarkerAddOrig(e);
         missionList();
     };
 })(I18n, jQuery);
