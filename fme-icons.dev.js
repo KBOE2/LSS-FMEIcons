@@ -1,6 +1,6 @@
 (function (I18n, $) {
 
-    let svg_template = '<svg xmlns="http://www.w3.org/2000/svg" class="mission_vehicle_state" height="1000.0" viewBox="0 0 1000.0 1000.0" width="1000.0" version="1.1" id="mission_vehicle_state_{{id}}"><g><circle r="500" cx="50%" cy="50%" stroke="{{color}}" fill="{{color}}"/><text text-anchor="middle" fill="black"><tspan>{{keyword}}</tspan></text></g></svg>';
+    let svg_template = '<svg xmlns="http://www.w3.org/2000/svg" class="mission_vehicle_state" height="1000.0" viewBox="0 0 1000.0 1000.0" width="1000.0" version="1.1" id="mission_vehicle_state_{{id}}"><g><circle r="500" cx="50%" cy="50%" stroke="{{color}}" fill="{{color}}"/><text text-anchor="middle" alignment-baseline="middle" fill="black" font="1000px bold, Monospace"><tspan>{{keyword}}</tspan></text></g></svg>';
 
     let colors = {
         "red": "#C9302C",
@@ -18,7 +18,7 @@
             let bma = !!$(this).text().match(I18n.t("fmeIcons.bma"));
             let missionId = $(this).attr('mission_id');
             let missionType = $(this).attr('mission_type_id');
-            let missionStatus = $(this).children().hasClass('mission_panel_green') ? "green" : $(this).children().hasClass('mission_panel_yellow') ? "yellow": "red";
+            let missionStatus = $(this).children().hasClass('mission_panel_green') ? "green" : $(this).children().hasClass('mission_panel_yellow') ? "yellow" : "red";
             $(this).find('.mission_vehicle_state').remove();
             $(this).find('.col-xs-1').append(svg_template.replace(/{{missionId}}/g, missionId).replace(/{{color}}/g, colors[missionStatus]).replace(/{{keyword}}/g, missionType));
         });
@@ -32,7 +32,7 @@
 
     let missionMarkerAddOrig = missionMarkerAdd;
 
-    missionMarkerAdd = function(e) {
+    missionMarkerAdd = function (e) {
         missionMarkerAddOrig(e);
         missionList();
     };
