@@ -1,6 +1,6 @@
 (function (I18n, $) {
 
-    let svg_template = '<svg xmlns="http://www.w3.org/2000/svg" class="mission_vehicle_state" height="1000.0" viewBox="0 0 1000.0 1000.0" width="1000.0" version="1.1" id="mission_vehicle_state_{{id}}"><g><circle r="500" cx="50%" cy="50%" stroke="{{color}}" fill="{{color}}"/><text text-anchor="middle" alignment-baseline="middle" fill="black" font="1000px bold, Monospace"><tspan>{{keyword}}</tspan></text></g></svg>';
+    let svg_template = '<svg xmlns="http://www.w3.org/2000/svg" class="mission_vehicle_state" height="1000.0" viewBox="0 0 1000.0 1000.0" width="1000.0" version="1.1" id="mission_vehicle_state_{{id}}"><g><circle r="500" cx="50%" cy="50%" stroke="{{color}}" fill="{{color}}"/><text text-anchor="middle" alignment-baseline="middle" fill="black" x="50%" style="font: bold 1000px Monospace, sans-serif;" y="60%"><tspan>{{keyword}}</tspan></text></g></svg>';
 
     let colors = {
         "red": "#C9302C",
